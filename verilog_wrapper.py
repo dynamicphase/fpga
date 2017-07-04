@@ -97,13 +97,13 @@ class verilog_wrapper(object):
         if self.input_pins:
             # assign direction pins inputs to 1b'1
             self.assign_dir(self.input_pins, 1)
+            
         if self.output_pins:
             # assign direction pins outputs to 1b'0
             self.assign_dir(self.output_pins, 0)
 
         self.f.write('\n')
         self.create_module_instance()
-
         self.f.write('endmodule')
 
 
