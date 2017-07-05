@@ -88,6 +88,7 @@ class verilog_wrapper(object):
         if self.topfile.inout_pins:
             self.f.write('//Inouts\n')
             self.write_pins_dir(self.topfile.inout_pins)
+
             # TBD: Need to handle searching for dir pins in top level
         self.f.write('\n')
 
